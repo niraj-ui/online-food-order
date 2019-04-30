@@ -1,0 +1,24 @@
+ 
+<!-- <form [formGroup]="reg_form"  (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="email">
+  <input type="tel" formControlName="password">
+
+  <button type="submit">Register Here</button>
+</form> -->
+<div class="reg_bg">
+  <img src="assets/svg/logo-white.svg" alt="" class="svg_logo_white">
+<div class="wid_80">
+    <form [formGroup]="reg_form"  (ngSubmit)="onSubmit()">
+
+        <div class="input_box">   <img src="assets/svg/user.svg" alt="" class="icon"> <input type="text" formControlName="name"></div>
+        <div class="input_box">   <img src="assets/svg/phone.svg" alt="" class="icon icon1"> <input type="tel" formControlName="mobile"></div>
+
+      <label><input type="checkbox" formControlName="cb"> I agree with <a routerLink="terms" >Terms & Conditions</a></label>
+      <div style="color: red; padding-top: 0.2rem" *ngIf="reg_form.hasError('required', 'cb')">Required</div>
+        <button type="submit" class="btn_cont" [disabled]="reg_form.invalid">Continue</button>
+      
+      </form>
+    
+</div>  <a routerLink="/login">Login</a>
+
+</div>

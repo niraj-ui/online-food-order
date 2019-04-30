@@ -1,0 +1,57 @@
+ <div class="wid_90" *ngFor="let ordr_data of ordr_det_data">
+ 
+
+<div  >
+    <div class="thanks_mess"><img src="assets/svg/order-details.svg" class="thank_you_icn">
+      <h3>Thank You</h3>
+      <p>Your Order has been placed and currently in 
+        <span *ngIf="ordr_data.data.order_status==0">progress</span>
+        <span *ngIf="ordr_data.data.order_status==1">confirm</span>
+        <span *ngIf="ordr_data.data.order_status==3">cancel</span>
+        <span *ngIf="ordr_data.data.order_status==4">delivered</span>
+        . </p>
+      <h4>Order No : <strong>{{ordr_data.data.order_no}}</strong></h4>
+    </div>
+    
+    <table class="table table-bordered">
+      <tr>
+        <td>Food Name</td>
+        <td>Qty.</td>
+        <td>Price</td>
+      </tr>
+      <tr *ngFor="let data of ordr_data.data.ordered_items">
+          <td>{{data.sub_category_name}}</td>
+          <td>{{data.quantity}}</td>
+          <td>{{data.unit_price | currency:'INR':'symbol'}}</td>
+        </tr>
+    </table>
+    <div class="ordr_bonus"> <img src="assets/svg/bonus_red.svg" class="bonus_red">PKB Loyalty Bonus  <strong>{{ordr_data.data.points}}</strong></div>
+    <table class="table table-bordered">
+    <tr>
+      <td>Subtotal</td>
+      <td>{{ordr_data.data.total_price | currency:'INR':'symbol'}}</td>
+    </tr> 
+    <tr>
+    <td>Delivery Charge </td>
+    <td>{{ordr_data.data.delivery_charge | currency:'INR':'symbol'}}</td>
+    </tr> 
+    <tr>
+    <td>CGST (2.5%)</td>
+    <td>{{ordr_data.data.cgst | currency:'INR':'symbol'}}</td>
+    </tr> 
+    <tr>
+    <td>SGST (2.5%)</td>
+    <td>{{ordr_data.data.sgst | currency:'INR':'symbol'}}</td>
+    </tr> 
+    <tr>
+    <td>Total Bill</td>
+    <td>{{ordr_data.data.grand_total | currency:'INR':'symbol'}}</td>
+    </tr> 
+     
+    </table>
+</div>
+
+
+ </div>
+
+

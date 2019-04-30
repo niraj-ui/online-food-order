@@ -1,0 +1,31 @@
+<div class="">
+<h2 mat-dialog-title>{{data.pro_name}}</h2>
+<div mat-dialog-content>
+  
+<table class="table">
+  <tr>
+      <td>Half</td>
+      <td>{{data.id}}</td>
+      <td>{{data.half_price}}</td>
+      <td><a (click)="sub_half_plus(data)" role="button" class="btn_add">-</a></td>
+      <td><a (click)="sub_half_minus(data)" role="button" class="btn_add">+</a></td>
+  </tr>
+  <tr>
+      <td>Full</td>
+      <td></td>
+      <td>{{data.full_price}}</td>
+      <td>  <a (click)="sub_full_plus(data)" role="button" class="btn_add">-</a></td>
+      <td>  <a (click)="sub_full_minus(data)" role="button" class="btn_add">+</a></td>
+    </tr>
+
+</table>
+
+</div>
+
+<div mat-dialog-actions >
+  <button mat-button class="btn_cont" [mat-dialog-close]="data.animal" cdkFocusInitial>Add Items</button>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+</div>
+
+
+</div>

@@ -1,0 +1,37 @@
+ 
+
+
+<div class="clearfix"></div> 
+<div class="wid_90 fed_bck">
+    <form [formGroup]="fedback_form" (ngSubmit)="onSubmit()">
+<div class="fed_lft">
+    <!-- {{fedback_data}} -->
+    <span >
+           
+        <!-- <span *ngFor="let data of fed_data.data">{{data.order_no}}</span> -->
+    </span>
+    <h3 *ngFor="let fed_data of fedback_data">Order Number :  {{fed_data.data.order_no}}</h3>
+    <p>PKB needs your feedbacks of you order.</p>
+</div>
+<div class="fed_rit">
+    <fieldset class="rating">
+        <input type="radio" id="star5" formControlName="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+        <input type="radio" id="star4half" formControlName="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+        <input type="radio" id="star4" formControlName="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+        <input type="radio" id="star3half" formControlName="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+        <input type="radio" id="star3" formControlName="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+        <input type="radio" id="star2half" formControlName="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+        <input type="radio" id="star2" formControlName="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" id="star1half" formControlName="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+        <input type="radio" id="star1" formControlName="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+        <input type="radio" id="starhalf" formControlName="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    </fieldset>
+</div>
+<div class="clearfix"></div>
+<br><br>
+<div class="">
+    <textarea placeholder="Write here your valuable feedbacks..."   formControlName="message"></textarea>
+</div>
+<button type="submit" class="btn_cont" [disabled]="fedback_form.invalid">Continue</button>
+</form>
+</div>

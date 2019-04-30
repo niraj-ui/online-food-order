@@ -1,0 +1,92 @@
+
+
+ <!-- <a routerLink="/cart">my cart</a> -->
+ <!-- <li *ngFor="let cart of productAddedTocart;let q = index">
+   {{q+1}} + {{cart.Quantity}}
+</li>  -->
+
+
+<!-- <h3 style="color: red">all total {{allTotal}}</h3> -->
+<p *ngFor="let alert of alerts">
+    <ngb-alert style="width:90%;" [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  
+ 
+<ul class="subcat_list">
+  <div *ngFor="let subcat1 of subdata">
+<!-- <hr>{{subcat_id}} -->
+<div *ngFor="let subcat  of subcat1.data">
+
+<div *ngIf="subcat.category_id ===subcat_id"> 
+
+<li><div class="img_lft"><img src="http://www.petukibiryani.com/pos/{{subcat.file}}"  alt=""></div>
+ 
+<div class="txt_rit">
+  <h3>{{subcat.sub_category_name}}</h3>    
+
+<p>{{subcat.category_name}} </p>
+<p>{{subcat.description}}</p>
+
+<span *ngIf="subcat.type==1" class="icn_veg"> <img src="assets/svg/veg.svg" alt="" class="icon"></span>
+<span *ngIf="subcat.type==2" class="icn_veg"> <img src="assets/svg/non-veg.svg" alt="" class="icon"> </span>
+<span *ngIf="subcat.is_variant==1"><span class="price">Full- ₹{{subcat.full_price}}</span> <span class="price">Half-  ₹{{subcat.half_price}}</span></span>
+<span *ngIf="subcat.is_variant==0" class="price">₹{{subcat.base_price}}</span>
+
+
+
+
+
+<div class="butn_cart">
+
+  <span *ngIf="subcat.is_variant==1"  class="btn_add_minus">
+      <span *ngIf="pq_full(subcat) == Null &&  pq_half(subcat) == Null "> <a class="btn_add" mat-raised-button (click)="openDialog(subcat)">ADD</a>  </span> 
+      
+    <!-- <span   (click)="openDialog(subcat)">ADD </span> -->
+   
+
+    <span *ngIf="pQ(subcat) >= 0" class="btn_add_minus_set"> 
+        <a (click)="openDialog(subcat)" role="button" class="btn_plus_icn"><img src="assets/svg/plus-gray.svg" alt="" class="icon"></a>
+        <span class="count_qunt">  
+            <span *ngIf="pq_full(subcat) == Null && pq_half(subcat) >= 0">{{pq_full(subcat)}} {{pq_half(subcat)}}</span>  
+            <span *ngIf="pq_half(subcat) == Null && pq_full(subcat) >= 0">{{pq_full(subcat)}} {{pq_half(subcat)}}</span>
+            <span *ngIf="pq_full(subcat) >= 0 && pq_half(subcat) >= 0">{{pq_full(subcat) + pq_half(subcat)}}</span>
+        </span>
+        <a (click)="openDialog(subcat)" role="button" class="btn_minus_icn"><img src="assets/svg/minus-gray.svg" alt="" class="icon"></a>
+      </span> 
+  </span>
+
+
+
+
+<!-- <span *ngIf="pq_full(subcat) >= 0">{{pq_full(subcat)}}</span>    -->
+  
+
+<!-- end multiple product  *ngIf="pQ(subcat) >=   0"-->
+<span *ngIf="subcat.is_variant==0" class="btn_add_minus">
+    <span *ngIf="pQ(subcat) == Null ||  pQ(subcat) == 0  "> <a class="btn_add" (click)="OnAddCart(subcat)">ADD</a>  </span> 
+  <div  *ngIf="pQ(subcat) >= 0" class="btn_add_minus_set"> 
+    <a (click)="increase(subcat)" role="button" class="btn_plus_icn"><img src="assets/svg/plus-gray.svg" alt="" class="icon"></a>
+    <span class="count_qunt">  {{pQ(subcat)}}</span>
+    <a (click)="decrease(subcat)" role="button" class="btn_minus_icn"><img src="assets/svg/minus-gray.svg" alt="" class="icon"></a>
+  </div> 
+</span>
+<!-- end single product -->
+
+</div>
+
+
+</div> <!-- end right-->
+
+</li>
+
+</div>
+</div>
+ </div> <!-- end for loop-->
+
+
+</ul>
+
+
+<!-- modal --------- html start -->
+
+ 

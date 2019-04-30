@@ -1,0 +1,3 @@
+.example-container {position: absolute;top: 0px;bottom: 0px;left: 0;right: 0;background: #ffcb00}
+.example-sidenav {display: flex;align-items: center;justify-content: center;width: 600px;background:#fff;border-right: 1px solid #000;}
+

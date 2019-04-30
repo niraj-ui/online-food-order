@@ -1,0 +1,40 @@
+  <ul class="nav_cat"  *ngFor="let cat1 of ca_data">     
+    <li *ngFor="let cat of cat1.data">    
+      <a routerLink="/category/subcategory/{{cat.id}}" routerLinkActive="active" >{{cat.category_name}} </a>
+    </li>
+  
+  </ul>
+  <router-outlet></router-outlet>
+<!-- <div *ngFor="let catlist of niraj_data">
+  <div *ngFor="let subcat of catlist.data">
+
+      <h3>{{subcat.sub_category_name}}</h3>
+
+      <span class="price"> <img src="http://www.petukibiryani.com/pos/{{subcat.file}}"  alt=""> ₹{{subcat.base_price}}</span>
+      <a class="btn_add" (click)="OnAddCart(subcat)">ADD</a>
+      <a (click)="increase(subcat)" role="button" class="btn_add">+</a>
+      <a (click)="decrease(subcat)" role="button" class="btn_add">-</a>
+      <br><span style="color: red">id: {{subcat.id}}</span>
+
+  </div>
+</div> -->
+
+
+ 
+<!-- (click)="click_post_cat_id(cat.id)"  assets/images/icons/{{subcat.type}}.png"
+<li *ngFor="let subcat  of subcategorydata.data">
+    
+    <div class="txt_rit">
+      <h3>{{subcat.sub_category_name}}</h3>
+      
+  <br>
+  {{subcat.category_name}}<br>  
+  
+  <span class="price"> <img src="assets/images/icons/{{subcat.type}}.png"  alt=""> ₹{{subcat.base_price}}</span>
+  <a class="btn_add" (click)="OnAddCart(subcat)">ADD</a>
+  <a (click)="increase(subcat)" role="button" class="btn_add">+</a>
+  <a (click)="decrease(subcat)" role="button" class="btn_add">-</a>
+  <br><span style="color: red">id: {{subcat.id}}</span> <br>
+ 
+    </div> -->
+  

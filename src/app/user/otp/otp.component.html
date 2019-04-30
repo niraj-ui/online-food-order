@@ -1,0 +1,16 @@
+<div class="reg_bg">
+<div class="wid_80">
+  <h4>Enter OTP</h4>
+  <form [formGroup]="otp_form"  (ngSubmit)="onSubmit()">
+  <div class="otp_box">
+    <input formControlName="otp">
+  </div>
+
+  <p class="otp_txt">We have sent an SMS with <strong>one time password </strong> on your phone number.</p>
+
+  <h5>Resend Again   <strong>01:37 min</strong></h5>
+  <button type="submit" class="btn_cont" [disabled]="otp_form.invalid">CONFIRM NOW</button>
+
+  </form>
+</div> <!-- end 80-->
+</div>

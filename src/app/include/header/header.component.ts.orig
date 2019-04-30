@@ -1,0 +1,76 @@
+import { Component, OnInit, Input } from '@angular/core';
+import { mainService } from 'src/app/home/main.services';
+import { Observable } from 'rxjs';
+ 
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+ 
+
+  showFiller = false;
+  navdata=[];
+  events: string[] = [];
+  user:number;
+  user_data:any;
+  user_data_in:any;
+  user_data_inner=[]
+  total$: Observable<number>;
+  productAddedTocart;
+  constructor(private _mainservice:mainService ) {
+     this.total$ = _mainservice.total$;
+     //console.log(this.total$)
+   }
+   
+
+  ngOnInit() {
+    this.productAddedTocart=JSON.parse(localStorage.getItem('product'))
+    this._mainservice.addProductToCart(this.productAddedTocart);
+    //this.total$ = this._mainservice.total$;
+    //this._mainservice.cast.subscribe(user=>this.user=user);
+
+   console.log(this.total$)
+
+    //console.log(this.allTotal_cart)
+
+    this._mainservice.page_list()
+    .subscribe(
+      data=>{
+      //  console.log(data)
+        data=this.navdata.push(data)
+    //  this.navdata=data;
+     // console.log(this.navdata);
+    })
+
+   // console.log(this.events);
+
+    // user details
+
+    this._mainservice.user_details(9)
+    .subscribe(data=>{
+     // console.log(data);
+
+      // data=this.user_data.push(data);
+     // console.log(data)
+      this.user_data_in=data
+     // console.log(this.user_data_in.user_details)
+
+      this.user_data=this.user_data_in.user_details
+      this.user_data_inner=this.user_data[0]
+     // console.log(this.user_data[0].auth_token);
+      localStorage.setItem('token', this.user_data[0].auth_token);
+     // this.user_data_in=this.user_data.user_details
+
+    })
+
+  } // end ng onit
+  // Listen to all clicks on the document
+
+
+
+
+
+}

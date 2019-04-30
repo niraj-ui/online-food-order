@@ -1,0 +1,12 @@
+<div class="reg_bg">
+  <img src="assets/svg/logo-white.svg" alt="" class="svg_logo_white">
+<div class="wid_80">
+    <form [formGroup]="login_form"  (ngSubmit)="onSubmit()"> 
+      <div class="input_box"><img src="assets/svg/phone.svg" alt="" class="icon icon1"> <input type="tel" formControlName="mobile"></div>
+      <button type="submit" class="btn_cont">Continue</button>      
+    </form>
+    <a routerLink="/register">Register</a>
+
+</div>
+
+</div>

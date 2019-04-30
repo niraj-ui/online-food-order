@@ -1,0 +1,16 @@
+
+
+export interface Product{
+     id: number     ;
+     Quantity:number;
+     ProductID:string;
+     sub_category_name:string;
+     base_price:number;
+     UnitPrice:string;
+     half_price:number;
+     full_price:number;
+     is_variant:number;
+     pro_id:number;
+     pro_name:string;
+
+}

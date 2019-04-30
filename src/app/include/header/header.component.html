@@ -1,0 +1,43 @@
+<div class="header_top" *ngIf="isValid()">
+
+
+    <ng-container>
+        <mat-sidenav-container class="example-container">
+
+          <mat-sidenav #sidenav mode="side"  [(mode)]="over" [(opened)]="opened"   class="example-sidenav" [fixedInViewport]="true" [fixedTopGap]="0" [fixedBottomGap]="0" role="navigation">
+              <div class="menu_top"> 
+                <h3>{{getUser().name}}</h3>
+                <h4>{{getUser().mobile}}</h4>
+              </div>
+              <ul class="nav_list">
+               <div *ngFor="let nav1 of navdata">
+                <li><a mat-list-item  routerLink="/home" (click)="sidenav.toggle()"><span></span>Home </a></li>
+                <li><a mat-list-item  routerLink="/myorder" (click)="sidenav.toggle()"><span></span>My Orders </a></li>
+                <li><a routerLink="/bonus"  (click)="sidenav.toggle()"><span></span>PKN Loayalty Bonus<span class="batch_red">₹50</span> </a></li>
+                <li><a routerLink="/notifications"  (click)="sidenav.toggle()"><span></span>Notifications </a></li>
+
+                <li><a routerLink="/contact"  (click)="sidenav.toggle()"><span></span>Contact Us </a></li>
+                <li><a routerLink="/page/2"  (click)="sidenav.toggle()"><span></span>About PKB </a></li>
+                <li><a routerLink="/page/4"  (click)="sidenav.toggle()"><span></span>Terms & Conditons </a></li> 
+              
+
+              </div>
+              </ul>
+          </mat-sidenav>
+      
+          <mat-sidenav-content class="head_inner"> 
+          <img src="assets/svg/nav.svg" alt="" mat-button (click)="sidenav.toggle()" class="nav_icon"> 
+          <p class="nav_txt">Food Items</p>
+          
+          <a routerLink="/cart" class="bag_icn"><img src="assets/svg/bag.svg" alt="" class="nav_icon "> 
+            <!-- <span (calculteAllTotal_cart)="allTotal_cart($event)">{{user}}</span> -->
+            <span >{{total$ | async }}</span>
+          </a>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      
+        
+      </ng-container>
+ 
+     
+</div>

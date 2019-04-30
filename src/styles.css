@@ -1,0 +1,171 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* You can add global styles to this file, and also import other style files */
+body{margin: 0;padding: 0;}
+ul,ol{margin: 0;padding: 0;}
+.main_div{width:100%;text-align: center;}
+.main_container{width: 750px; margin: 0 auto;display: inline-block;border: 1px solid #eee;text-align: left}
+
+
+
+
+
+
+.nav_cat{float: left;width: 100%;border-bottom: #f4f4f4 2px solid ;margin: 0;padding: 0 0 10px; display: flex;   overflow-x: scroll;}
+.nav_cat li{float: left;margin: 0 10px;list-style: none;    white-space: nowrap;} 
+.nav_cat a{font-size: 24px; padding: 0 15px 5px; border-bottom: 4px solid #fff;text-decoration: none;color: #000000;line-height: 40px;}
+.nav_cat li a:hover,.nav_cat li a.active{color: #7d141a; border-bottom: 4px solid #7d141a;}
+.mat-drawer-backdrop{height: 100% ;position: fixed!important;}
+
+.subcat_list{float: left;width:90%;border-bottom: #f4f4f4 1px solid ;margin: 0 5%;padding: 0px;  }
+ .subcat_list .subcat_list_li{float: left;margin:10px 0px;list-style: none; white-space: nowrap;width: 100%;border: 1px solid #f1f1f1;padding:0px} 
+
+.subcat_list li{float: left;margin:10px 0px;list-style: none; width: 100%;border: 1px solid #f1f1f1;padding:0px} 
+
+
+.img_lft{float: left;width: 30%;}
+.img_lft img{float: left;}
+.txt_rit{float: left;padding: 10px 15px;width: 70%;}
+.txt_rit h3{font-size: 28px;line-height: 40px;margin: 0;}
+.price{font-size: 24px;line-height: 40px;margin: -4px 0  0 14px;float: left;}
+.butn_cart{float: right;}
+
+.btn_add{background: #30a649;padding: 0px 15px;border-radius: 20px;font-size: 21px; color: #fff;text-decoration: none;float: right;width: 100%;text-align: center;border:2px solid #30a649;}
+.btn_add_minus{width: 116px; height: 30px;float: right;position: relative;}
+.btn_add_minus img{width: 14px;}
+.btn_plus_icn{float: right;margin-top: 2px;}
+.btn_minus_icn{float:left ;margin-top: 2px;}   
+.btn_add_minus_set{padding: 0px 15px 0;width: 100%;float: left;border:2px solid #5b5b5b;border-radius: 25px;text-align: center}
+.count_qunt{color: #000000;font-size: 24px; line-height: 30px;}
+
+/*------------- menu start  ---------- */
+.header_top{min-height: 84px; background: #ffcb00;float: left;width: 100%;color: #7d141a;font-size: 30px;position: relative;padding: 0}
+
+.head_inner{width:90%;margin: 0 0;float: left;line-height: 84px;}
+.nav_icon{float: left;display: inline-block;margin-top: 32px; margin-right: 25px;margin-left: 40px;width: 35px;}
+.nav_txt{float: left;display: inline-block;margin: 0}
+.bag_icn{float: right;margin:21px 15px 0  0;position: relative;}
+.bag_icn img{margin: 0}
+.bag_icn span{position: absolute; top: -5px; background: red;color: #fff;font-size: 18px;right:-15px;padding: 2px 5px;line-height: 25px;border-radius: 50%;width: 30px;text-align: center;}
+.menu_top h3,.menu_top h4{margin: 0;}.menu_top h3{margin-top: 90px;float: left;width: 100%;}
+.menu_top{background: #7d141a;min-height: 280px;color: #fff;padding: 0 50px;}
+
+.nav_list{margin: 0;padding: 0;list-style: none;}
+
+.nav_list li{float: left;margin: 0 0px;list-style: none;    white-space: nowrap;width: 100%} 
+.nav_list a{font-size: 30px; padding: 25px 35px 25px 75px;  text-decoration: none;color: #000000;line-height: 40px;display: block;}
+.nav_list li a:hover,.nav_list li a.active{color: #7d141a; background:#efefef ;}
+
+
+/*---------- home page in adress ------- */
+.home_adress{background: #d82a2a;color: #fff;padding: 5px 0 10px; float: left; width: 100%;font-size: 24px;}
+.home_adress h3{float: left;font-size: 24px;margin: 0 40px;}
+.home_adress h3 strong{font-size: 26px;}
+.home_adress a{float: right;margin: 16px 30px 0 0;font-size: 24px;}
+
+
+/*----- home page in slide ------ */
+.carousel-item{display: none;}
+.carousel-item img{width: 100%;}
+.carousel-item.active{display: inline;}
+.carousel-control-prev,.carousel-control-next {margin: 8px; float: left;background: red;height: 45px;width: 45px;display: none;}
+
+.carousel-indicators{position: absolute;bottom: 20px;width: 100%;text-align: center;margin: 0;}
+.carousel-indicators li{list-style: none;height: 15px;width: 15px; display: inline-block;background: #a3a3a3; border-radius: 50%;margin: 0 5px;}
+.carousel-indicators li.active{background: #ffc107;}
+.carousel {float: left;width: 100%;position: relative;}
+.carousel img{float: left;}
+
+/*-------- home page in bottom in category page  --------- */
+.hme_pkb{background: #f4f4f4;float: left;width: 100%;padding: 10px 0;text-align: center;}
+.hme_pkb h3{font-size: 36px;color: #7d141a;margin: 0;}
+.hme_pkb h4{font-size: 21px;color: #7d141a;margin: 0;}
+
+.hme_cat_list {width:46%;float: left; padding: 0px 0;margin: 10px 2%;}
+.hme_cat_list img{width: 100%;border-top-left-radius: 15px;border-top-right-radius: 15px;float: left;}
+
+.bnt_ordr_now{background: #ffcc07;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;color: #7d1419;font-size: 18px;line-height: 54px;text-align: center;float: left;width: 100%;font-weight: 400;text-decoration: none}
+.bnt_ordr_now:hover{color: #000;text-decoration: none}
+.h_cat_txt h3{font-size: 24px;color: #000;margin: 0;font-weight: 400;padding: 0 15px;}
+.h_cat_txt p{font-size: 18px;color: #4f4f4f;margin: 0 0 10px;padding: 0 15px;}
+.h_cat_txt {background: #f1f1f1;float: left;width: 100%;padding: 10px 0 10px;}
+.h_cat_img{float: left;width: 100%;}
+.pkb_menu{width: 96%;margin: 0 2%;float: left;margin-top: 20px;}
+
+
+/*----------- register page ------ */
+.reg_bg{background: url(./assets/images/register-bg.jpg) no-repeat top left; background-size: 100% 100%;float: left;width: 100%;text-align: center}
+ .wid_80{width: 80%;margin: 0 10%;}
+.reg_bg input{height: 60px;background: #fff;border: 1px solid #eee;float: left;width: 100%;margin:30px 0 10px;color: #000;font-size: 30px;line-height: 30px; padding: 0 70px;}
+.reg_bg input[type=checkbox]{width: 60px;float: left;margin-right: 30px;}
+.reg_bg .input_box{float: left;width: 100%;position: relative;}
+.reg_bg .icon{position: absolute;top: 36px; left: 20px;width: 35px;}
+.reg_bg .icon1{ top: 42px; }
+.reg_bg label{color: #fff;float: left;line-height: 110px;margin: 0;font-size: 26px;}
+.reg_bg label a{color: #ffc107;}
+.btn_cont{background: #ffcc08;border: 1px solid #eee;float: left;width: 100%;padding: 10px 15px;color: #fff;margin: 50px 0 100px;height: 90px;border: none;font-size: 28px;text-transform: uppercase;border-radius: 15px;}
+.svg_logo_white{width: 70%;margin-top: 50px;}
+
+
+.wid_80 h4{color: #fff; margin:100px 0 50px;font-size:48px; }
+.wid_80 h5{color: #fff;     margin:100px 0 0;font-size: 26px; text-align: center;}
+.wid_80 .otp_txt{color: #fff;line-height:30px;margin: 0;font-size: 28px;text-align: left; }
+.wid_80 .otp_txt strong,.wid_80 h5 strong{color: #ffc107}
+
+.icn_veg{width: 35px;float: left;}
+
+/*----------- contanct page  ------- */
+.cont_row{float: left;width: 100%; margin-top: 70px;}
+.cont_lft .icon{width: 64px; float: left;margin-right: 20px;}
+.cont_row:last-child{margin-bottom: 100px;}
+.cont_row p{font-size: 21px;}
+.cont_row p strong{font-size: 24px;}
+
+.pge_bonus{text-align: center}
+.pge_bonus .icon{width: 60%;text-align: center;margin: 100px 0 50px}
+.pge_bonus p{margin-bottom: 50px;}
+
+
+/*----------- my cart page ------- */
+.bg_point{background: #7d141a;min-height: 68px; padding: 15px 40px;font-size: 24px; color: #fff;}
+.bg_point strong{color: #ffcc08;}
+.chck_bonus{color: #000; text-align: right;width: 100%;font-size: 30px;}
+.chck_bonus input{float: left;margin-top: 15px;}
+.chck_bonus strong{background: #7d141a;padding: 5px;color: #fff;font-size: 18px;margin-left: 30px;}
+
+
+/*----------- address chcekout ---- */
+.adrs_fill input{height: 60px;background: #fff;border:none; border-bottom: 2px solid #eee;float: left;width: 100%;margin:30px 0 10px;color: #000;font-size:24px;line-height: 30px; padding:0 60px 0 20px;}
+.adrs_fill input[type=checkbox]{width: 60px;float: left;margin-right: 30px;}
+.adrs_fill .input_box{float: left;width: 100%;position: relative;}
+.adrs_fill .icon{position: absolute;top: 36px; right:  20px;width: 35px;}
+
+/* ------------------   Order details ---------- */
+.wid_90{width: 90%;margin: 0 5%;}
+.wid_90 h4{color: #000; margin:0px 0 0px;font-size:24px; }
+.wid_90 h5{color: #7d141a;margin:00px 0 0;font-size: 26px; text-align: center;}
+.thank_you_icn{width: 243px;margin: 86px 0 30px}
+.bonus_red{width: 28px;float: left;margin-top: 8px;}
+.thanks_mess{text-align: center;}
+.thanks_mess h3{color: #111111; margin:0px 0 0px;font-size:60px;}
+.thanks_mess h4{color: #7d141a; margin:20px 0 20px;font-size:30px;}
+.thanks_mess h4 strong{color: #000}
+.thanks_mess p{color: #4f4f4f; margin:0px 0 0px;font-size:22px;}
+.ordr_bonus{text-align: right;font-size: 30px;margin-bottom: 20px;}
+.ordr_bonus strong{background: red;padding:5px;color: #fff;font-size: 20px;}
+
+.ord_list{list-style: none;}
+.ord_list li{border: 1px solid #eee;margin: 20px 0; padding: 20px 20px;float: left;width: 100%;}
+.btn_rate{font-size: 20px;color: #fff;background: #7d141a;float: left;border: 1px solid #7d141a;width: 220px;text-align: center;height: 56px;line-height: 56px;border-radius: 10px;}
+.btn_ordr{font-size: 20px;color: #fff;background: #7d141a;float: right;width: 220px;text-align: center;height: 56px;line-height: 56px;border-radius: 10px;}
+.ordr_btn_set{margin-top: 20px;}
+.ord_list .icn_star{width:30px;margin-right: 10px;}
+.ord_list .icn_star_hlf{width:15px;margin-right: -10px;}
+.ord_list .icn_star_hlf_lft{width:15px;margin-right:0px;}
+.ord_list .str_list{margin-top: 15px;float: left;}
+/*----- feedback page  ------- */
+.fed_bck{margin-top: 40px;}
+.fed_bck .fed_lft{float: left;}
+.fed_bck h3{font-size: 24px;color: #111111;margin: 0}
+.fed_bck p{font-size: 18px;color: #4f4f4f}
+.fed_bck .fed_rit{float: right;}
+.fed_bck textarea{width: 100%;min-height: 430px; resize: none;font-size: 21px; padding: 10px;color: #4f4f4f;border-color: #d0d0d0;}

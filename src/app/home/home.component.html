@@ -1,0 +1,24 @@
+
+<div class="home_adress"><h3><strong>No Stores in the neighbourhood.</strong>  <br>   Please Change your location.  </h3>  <a>Edit</a></div>
+ 
+ <div class='main_container'> 
+  <ngb-carousel  >
+      
+    <ng-template ngbSlide *ngFor="let bandata of home_ban.data"> <img src="http://www.petukibiryani.com/pos/{{bandata.banner}}" alt=""></ng-template>
+ 
+    
+  </ngb-carousel>
+ <!-- crausel end -->
+ <div class="hme_pkb">
+   <h3>PKB MENU</h3>
+   <h4>Now Order Your Favourite <br> Food Any Time</h4>
+ </div>
+<ul class="pkb_menu">
+<div *ngFor="let ca_data1 of ca_data">
+  <div class="hme_cat_list" *ngFor="let cat of ca_data1.data">
+    <div routerLink="/category/subcategory/{{cat.id}}" class="h_cat_img"><img src="http://www.petukibiryani.com/pos/{{cat.file}}" alt=""></div> <div class="h_cat_txt"  routerLink="/category/subcategory/{{cat.id}}"><h3>{{cat.category_name}}</h3><p>{{cat.description}}</p>  </div><a class="bnt_ordr_now"  routerLink="/category/subcategory/{{cat.id}}">ORDER NOW</a>
+  </div>
+</div> <!-- end for llop -->
+</ul>
+
+  </div>  

@@ -1,0 +1,88 @@
+ 
+
+<div class="wid_90">
+    <ul class="ord_list" *ngFor="let data_li of order_data">
+      
+        <li *ngFor="let data of data_li.data">
+          <p><strong>Order No :</strong>  {{data.order_no}}</p>
+        <p><strong>Order Placed :</strong>  {{data.created_on | date :'h:mm a, d MMM y'}} </p>
+        <p><strong>Bill Amount :</strong> {{data.payable_price}}</p>
+        <p><strong>Delivery Address :</strong> {{data.delivery_address}}</p>
+        <div class="clearfix"></div>
+        <div class="ordr_btn_set">       
+            <span *ngIf="data.feedback_rating >0 " class="str_list">
+               
+<span *ngIf="data.feedback_rating ==5 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+</span>
+
+<span *ngIf="data.feedback_rating ==4.5 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-hlf-lft.svg" class="icn_star_hlf_lft">
+    <img src="assets/svg/star-hlf-rit.svg" class="icn_star_hlf"> 
+</span>
+<span *ngIf="data.feedback_rating ==4 ">
+    <img src="assets/svg/star-full.svg" class="icn_star"> 
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">      
+</span>
+
+
+<span *ngIf="data.feedback_rating ==3.5 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-hlf-lft.svg" class="icn_star_hlf_lft">
+    <img src="assets/svg/star-hlf-rit.svg" class="icn_star_hlf"> 
+</span>
+<span *ngIf="data.feedback_rating ==3 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+
+</span>
+<span *ngIf="data.feedback_rating ==2.5 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-hlf-lft.svg" class="icn_star_hlf_lft">
+    <img src="assets/svg/star-hlf-rit.svg" class="icn_star_hlf"> 
+</span>
+<span *ngIf="data.feedback_rating ==2 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+    <img src="assets/svg/star-full.svg" class="icn_star">
+ 
+</span>
+<span *ngIf="data.feedback_rating ==1.5 ">
+    <img src="assets/svg/star-full.svg" class="icn_star">    
+    <img src="assets/svg/star-hlf-lft.svg" class="icn_star_hlf_lft">
+    <img src="assets/svg/star-hlf-rit.svg" class="icn_star_hlf"> 
+</span>
+<span *ngIf="data.feedback_rating ==1 ">
+        <img src="assets/svg/star-full.svg" class="icn_star">
+</span>
+<span *ngIf="data.feedback_rating ==0.5 ">    
+    <img src="assets/svg/star-hlf-lft.svg" class="icn_star_hlf_lft">
+    <img src="assets/svg/star-hlf-rit.svg" class="icn_star_hlf"> 
+</span>
+ 
+            
+        
+        </span>
+
+            <a *ngIf="data.feedback_rating ==Null " routerLink="/feedback/{{data.order_no}}" class="btn_rate">Rate Us</a>
+            <a routerLink="/order-details/{{data.order_no}}" class="btn_ordr">Order Details</a>
+        </div>
+        </li>
+        
+        </ul>
+
+
+</div>

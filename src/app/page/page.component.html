@@ -1,0 +1,13 @@
+ 
+ 
+
+<!-- {{pagedata.data.description}} -->
+<div *ngFor="let page1 of pagedata">
+<div *ngFor="let page of page1.data"> 
+  <div [innerHTML]="page.content"></div>  
+ </div>
+</div>
+
+
+
+

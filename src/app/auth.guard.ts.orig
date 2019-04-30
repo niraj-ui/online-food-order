@@ -1,0 +1,40 @@
+import { Injectable } from "@angular/core";
+import { CanActivate, Router } from '@angular/router';
+import { mainService } from './home/main.services';
+import { take, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
+
+@Injectable()
+
+export class AuthGuard implements CanActivate{
+    chcek_user;
+
+    constructor(private _mainservice:mainService, private router:Router){}
+
+    canActivate():boolean{
+<<<<<<< working copy
+      
+
+        if(this._mainservice.loggedIn()){            
+           // console.log('user login');
+            // this.chcek_user=true
+            // console.log(this.chcek_user);
+             this.router.navigate(['/home']);
+=======
+        if(this._mainservice.loggedIn()){
+>>>>>>> merge rev
+            return true;
+        }// end if
+        this.router.navigate(['/register']);
+<<<<<<< working copy
+            // console.log('user logout');        
+            // this.chcek_user=false;
+            // console.log(this.chcek_user);
+=======
+>>>>>>> merge rev
+        return false;
+    }// end 
+
+
+}

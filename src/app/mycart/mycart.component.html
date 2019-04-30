@@ -1,0 +1,101 @@
+
+<div class="clearfix"></div>
+<div class="bg_point">Complete this order to get <strong>50</strong> Points.</div>
+ <div class="wid_80">
+   
+<table class="table table-bordered">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          
+          <th scope="col">update</th>
+          <th scope="col">price</th>
+        </tr>
+      </thead>
+<!-- <tr *ngFor="let cart of productAddedTocart_full;let q = index">
+<td>{{q+1}}</td>
+<td><p>{{cart.sub_category_name}} <br><p style="color: red" *ngIf="cart.half_price>0">Half</p><p style="color: red" *ngIf="cart.full_price>0">Full</p></td>
+<td> <p>{{q+1}} + {{cart.Quantity}}</p></td>
+<td><a (click)="increase(cart)" role="button" class="btn_add">+</a>   <a (click)="decrease(cart)" role="button" class="btn_add">-</a></td>
+<td> 
+  <p *ngIf="cart.full_price>0">  <strong>₹</strong>{{cart.full_price * cart.Quantity}}  base {{cart.full_price}}</p>
+  <p *ngIf="cart.half_price>0">  <strong>₹</strong>{{cart.half_price * cart.Quantity}}  base {{cart.half_price}}</p>
+</td> 
+</tr> -->
+      
+<tr *ngFor="let cart of productAddedTocart;let q = index">
+<td>{{q+1}}</td>
+<td><p>{{cart.sub_category_name}} </p>  <p style="color: red" *ngIf="cart.half_price>0">Half</p><p style="color: red" *ngIf="cart.full_price>0">Full</p></td>
+ 
+
+
+
+<td>
+  <span class="btn_add_minus">  
+      <span  class="btn_add_minus_set"> 
+        <a (click)="increase(cart)" role="button" class="btn_plus_icn"><img src="assets/svg/plus-gray.svg" alt="" class="icon"></a>    
+        <span class="count_qunt">  {{cart.Quantity}}</span>
+        <a (click)="decrease(cart)" role="button" class="btn_minus_icn"><img src="assets/svg/minus-gray.svg" alt="" class="icon"></a>
+      </span>   
+ </span>
+  <!-- <a (click)="increase(cart)" role="button" class="btn_add">+</a>   <a (click)="decrease(cart)" role="button" class="btn_add">-</a> -->
+
+</td>
+
+
+<td> 
+  <p *ngIf="cart.full_price>0">  <strong>₹</strong>{{cart.full_price * cart.Quantity}}    </p>
+  <p *ngIf="cart.half_price>0">  <strong>₹</strong>{{cart.half_price * cart.Quantity}}    </p>
+  <p *ngIf="cart.base_price>0"><strong>₹</strong>{{cart.base_price * cart.Quantity}}    </p>
+
+</td>
+ 
+</tr>
+
+
+</table>
+ 
+  <label class="chck_bonus"><input type="checkbox"> <span >PKB Loyalty Bonus <strong>50</strong></span></label>  
+
+ <!-- <h3 style="color: red">all total {{allTotal | currency:'INR':'symbol'}}</h3> -->
+
+ <hr>
+ <table class="table table-bordered">
+<tr>
+  <td>Subtotal</td>
+  <td>₹{{allTotal}}</td>
+</tr>
+<tr>
+  <td>CGST (2.5%)</td>
+  <td>{{allTotal*2.5/100 | currency:'INR':'symbol'}}</td>
+</tr>
+<tr>
+  <td>SGST (2.5%)</td>
+  <td>{{allTotal*2.5/100 | currency:'INR':'symbol'}}</td>
+</tr>
+<tr>
+  <td>Delivery Charge</td>
+  <td>₹0</td>
+</tr>
+<tr>
+  <td>Total Bill</td>
+  <td>{{allTotal + allTotal *5/100    | currency:'INR':'symbol'}}</td>
+</tr>
+ </table>
+
+<!-- <table class="table">
+    <tr *ngFor="let prod of productAddedTocart;let q = index">
+        <td class="text-center">{{prod.id}}</td>
+        
+        <td>{{prod.ProductID}}</td>
+        <td>{{prod.ProductName}}</td>
+        <td>{{prod.sub_category_name}}</td>
+        <td>{{prod.base_price}} + {{prod.base_price * prod.Quantity}}  + {{prod.Quantity}}</td>
+      </tr>
+</table> -->
+
+<button (click)="ConfirmOrder()" class="btn_cont">CHECKOUT</button>
+
+<br><br>
+</div>

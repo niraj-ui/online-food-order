@@ -1,0 +1,53 @@
+<div class="">
+<h2 mat-dialog-title>{{data.sub_category_name}}</h2>
+<div mat-dialog-content>
+ 
+<table class="table">
+  <tr>
+      <td>Half</td>
+      <td>  <span class="count_qunt">  {{pq_half(data)}}</span></td>
+      <td>{{data.half_price}}</td>
+      <td>
+          <span class="btn_add_minus">
+              <span *ngIf="pq_half(data) == Null ||  pq_half(data) == 0 "> <a class="btn_add" (click)="OnAddCart_half(data)">ADD</a>  </span> 
+            <span *ngIf="pq_half(data) >=  0" class="btn_add_minus_set"> 
+              <a (click)="sub_half_plus(data)" role="button" class="btn_plus_icn"><img src="assets/svg/plus-gray.svg" alt="" class="icon"></a>
+              <span class="count_qunt">  {{pq_half(data)}}</span>
+              <a (click)="sub_half_minus(data)" role="button"  role="button" class="btn_minus_icn"><img src="assets/svg/minus-gray.svg" alt="" class="icon"></a>
+            </span> 
+          </span>
+          <!-- end -->
+        
+         </td>
+      <td> </td>
+      <td> </td>
+  </tr>
+  <tr>
+      <td>Full</td>
+      <td> <span class="count_qunt">  {{pq_full(data)}}</span></td>
+      <td>{{data.full_price}}</td>
+      <td> 
+          <span class="btn_add_minus">
+              <span *ngIf="pq_full(data) == Null ||  pq_full(data) == 0 "> <a class="btn_add" (click)="OnAddCart_full(data)">ADD</a>  </span> 
+            <span *ngIf="pq_full(data) >=  0" class="btn_add_minus_set"> 
+              <a (click)="sub_full_plus(data)" role="button" class="btn_plus_icn"><img src="assets/svg/plus-gray.svg" alt="" class="icon"></a>
+              <span class="count_qunt">  {{pq_full(data)}}</span>
+              <a (click)="sub_full_minus(data)" role="button"  role="button" class="btn_minus_icn"><img src="assets/svg/minus-gray.svg" alt="" class="icon"></a>
+            </span> 
+          </span>
+        </td>
+      <td>  </td>
+      <td> </td>
+    </tr>
+
+</table>
+
+</div>
+
+<div mat-dialog-actions >
+  <button mat-button class="btn_cont" [mat-dialog-close]="data.animal" cdkFocusInitial>Add Items</button>
+  <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+</div>
+
+
+</div>

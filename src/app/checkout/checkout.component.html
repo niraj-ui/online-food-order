@@ -1,0 +1,15 @@
+ 
+<div class="wid_80 adrs_fill">
+  <form [formGroup]="adress_form"  (ngSubmit)="onSubmit()">
+
+  <input type="text" class="" formControlName="address_line1" placeholder="Address Line 1">
+  <input type="text" class="" formControlName="address_line2" placeholder="Address Line 2">
+  <div class="input_box">   <img src="assets/svg/lock-adrs.svg" alt="" class="icon">
+  <input type="text" class="" formControlName="locality" placeholder="Localty / Sub Localty"> </div>
+  <div class="input_box">   <img src="assets/svg/lock-adrs.svg" alt="" class="icon">
+  <input type="text" class="" formControlName="landmark" placeholder="Landmarks"></div>
+
+  <button type="submit" class="btn_cont"  >Cash ON Delivery</button>
+
+</form>
+</div>
